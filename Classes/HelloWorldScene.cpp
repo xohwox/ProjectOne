@@ -1,7 +1,7 @@
 #include "HelloWorldScene.h"
 
 USING_NS_CC;
-
+extern float g_fScaleFactor;
 Scene* HelloWorld::createScene()
 {
     // 'scene' is an autorelease object
@@ -40,9 +40,9 @@ bool HelloWorld::init()
                                            "CloseSelected.png",
                                            CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
     
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-                                origin.y + closeItem->getContentSize().height/2));
-
+	closeItem->setPosition(Vec2(origin.x + visibleSize.width - g_fScaleFactor*closeItem->getContentSize().width/2 ,
+                                origin.y + g_fScaleFactor*closeItem->getContentSize().height/2));
+	closeItem->setScale(g_fScaleFactor);
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
@@ -55,7 +55,7 @@ bool HelloWorld::init()
     // create and initialize a label
     
     auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
-    
+	label->setScale(g_fScaleFactor);
     // position the label on the center of the screen
     label->setPosition(Vec2(origin.x + visibleSize.width/2,
                             origin.y + visibleSize.height - label->getContentSize().height));
@@ -65,7 +65,7 @@ bool HelloWorld::init()
 
     // add "HelloWorld" splash screen"
     auto sprite = Sprite::create("HelloWorld.png");
-
+	sprite->setScale(g_fScaleFactor);
     // position the sprite on the center of the screen
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
