@@ -6,9 +6,5 @@
 	<string>3D遊戲程式設計中文字型產生範例</string>
   <key>chinese2</key>
   <string>記得要設定成 unicode 方式儲存</string>
-  <key>chinese3</key>
-	<string>文字檔練習</string>
-  <key>chinese4</key>
-  <string>hello space </string>
 </dict>
 </plist>

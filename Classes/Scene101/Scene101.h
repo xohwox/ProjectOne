@@ -12,7 +12,7 @@ private:
 	cocos2d::Rect    rectCuber;
 	cocos2d::Rect    rectReplay;
 	cocos2d::Rect    rectReturn;
-//	cocos2d::Label *label1;
+
 	int  _sceneno;
 	char _cSceneNo[10];
 

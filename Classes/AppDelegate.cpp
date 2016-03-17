@@ -1,8 +1,11 @@
-#include "AppDelegate.h"
-#include "./Scene101/Scene101.h"
-//#include "./Scene101/Scene102.h"
+﻿#define SceneTransition 1
 
-#define SceneTransition 1
+#include "AppDelegate.h"
+#if SceneTransition == 1 || SceneTransition == 2
+#include "./Scene101/Scene101.h"
+#elif SceneTransition == 3
+#include "./Scene101/Scene102.h"
+#endif
 
 USING_NS_CC;
 
@@ -11,9 +14,6 @@ static cocos2d::Size designResolutionSize = cocos2d::Size(1280, 720);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
-float g_fScaleFactor=0;
-
-
 
 AppDelegate::AppDelegate() {
 
@@ -47,9 +47,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto glview = director->getOpenGLView();
     if(!glview) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-        glview = GLViewImpl::createWithRect("MyCocos2DX", Rect(0, 0, screenResolutionSize.width, screenResolutionSize.height),0.5f);
+        glview = GLViewImpl::createWithRect("MyCocos2DX", Rect(0, 0, screenResolutionSize.width, screenResolutionSize.height),0.5f);    //設定電腦螢幕打小
 #else
-        glview = GLViewImpl::create("MyCocos2DX");
+        glview = GLViewImpl::create("MyCocos2DX");  //設定手機螢幕大小
 #endif
         director->setOpenGLView(glview);
     }
@@ -62,28 +62,26 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // Set the design resolution
     glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
-    Size frameSize = glview->getFrameSize();
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-	director->setContentScaleFactor(MIN(screenResolutionSize.height / designResolutionSize.height, screenResolutionSize.width / designResolutionSize.width));
-#else
-	director->setContentScaleFactor(MIN(frameSize.height / designResolutionSize.height, frameSize.width / designResolutionSize.width));
-#endif
-	g_fScaleFactor = Director::getInstance()->getContentScaleFactor();
+    Size frameSize = glview->getFrameSize();   //讓畫面設定在手機框框內(不包含按鍵條)
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+//	director->setContentScaleFactor(MIN(screenResolutionSize.height / designResolutionSize.height, screenResolutionSize.width / designResolutionSize.width));
+//#else
+//	director->setContentScaleFactor(MIN(frameSize.height / designResolutionSize.height, frameSize.width / designResolutionSize.width));
+//#endif
+//	g_fScaleFactor = Director::getInstance()->getContentScaleFactor();
 
     register_all_packages();
 
     // create a scene. it's an autorelease object
 
-#if SceneTransition == 0
+#if SceneTransition == 1
 	auto scene = Scene101::createScene();
 	director->runWithScene(scene);
-#elif SceneTransition == 1
+#elif SceneTransition == 2
 	auto scene = TransitionMoveInL::create(0.6f, Scene101::createScene());
 	director->runWithScene(scene);
-#else
-	auto scene = TransitionZoomFlipX::create(0.6f, Scene102::createScene());
-	director->runWithScene(scene);
 #endif
+
 //	Director::getInstance()->replaceScene(scene);
     return true;
 }
