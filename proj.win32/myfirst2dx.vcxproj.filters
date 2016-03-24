@@ -16,8 +16,8 @@
     <Filter Include="resource\Fonts">
       <UniqueIdentifier>{e02f576c-e891-4eb8-9e2a-2422fe0f5d51}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\scene101">
-      <UniqueIdentifier>{96231cc3-29c3-4f6e-bbbb-59055f211350}</UniqueIdentifier>
+    <Filter Include="src\Scene101">
+      <UniqueIdentifier>{7bd682e8-872c-4a26-8ee1-962310743706}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,7 +28,10 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Scene101\Scene101.cpp">
-      <Filter>src\scene101</Filter>
+      <Filter>src\Scene101</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene101\Scene102.cpp">
+      <Filter>src\Scene101</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,13 +42,11 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Scene101\Scene101.h">
-      <Filter>src\scene101</Filter>
+      <Filter>src\Scene101</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="game.rc">
-      <Filter>resource</Filter>
-    </ResourceCompile>
+    <ClInclude Include="..\Classes\Scene101\Scene102.h">
+      <Filter>src\Scene101</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Resources\fonts\couriernew32.fnt">
@@ -60,6 +61,12 @@
     <None Include="..\Resources\scene101\scene101.tps">
       <Filter>resource\scene101</Filter>
     </None>
+    <None Include="..\Resources\scene101\scene101bg.plist">
+      <Filter>resource\scene101</Filter>
+    </None>
+    <None Include="..\Resources\scene101\scene101bg.tps">
+      <Filter>resource\scene101</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Resources\fonts\couriernew32_0.png">
@@ -71,7 +78,58 @@
     <Image Include="..\Resources\scene101\bean01.png">
       <Filter>resource\scene101</Filter>
     </Image>
+    <Image Include="..\Resources\scene101\bean1_01.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_02.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_03.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_04.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_05.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_jump01.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_jump02.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_jump03.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_jump04.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_wave01.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_wave02.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean1_wave03.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
     <Image Include="..\Resources\scene101\bean02.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean2_01.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean2_02.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean2_03.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean2_04.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\bean2_05.png">
       <Filter>resource\scene101</Filter>
     </Image>
     <Image Include="..\Resources\scene101\bean03.png">
@@ -81,6 +139,33 @@
       <Filter>resource\scene101</Filter>
     </Image>
     <Image Include="..\Resources\scene101\bg.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\ceyes1.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\ceyes2.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\ceyes3.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\checkbox.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\checkboxon.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\checkoff.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\checkon.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\cmouth1.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\cmouth2.png">
       <Filter>resource\scene101</Filter>
     </Image>
     <Image Include="..\Resources\scene101\cuber01.png">
@@ -116,6 +201,72 @@
     <Image Include="..\Resources\scene101\cuberbtn3.png">
       <Filter>resource\scene101</Filter>
     </Image>
+    <Image Include="..\Resources\scene101\cubershadow.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame1_01.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame1_02.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame1_03.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame1_04.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame1_05.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame1_06.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame1_07.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_01.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_02.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_03.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_04.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_05.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_06.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_07.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_08.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_09.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_10.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_11.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_12.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\flame2_13.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\loadingbar.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
     <Image Include="..\Resources\scene101\replaybtn.png">
       <Filter>resource\scene101</Filter>
     </Image>
@@ -134,13 +285,34 @@
     <Image Include="..\Resources\scene101\scene101.png">
       <Filter>resource\scene101</Filter>
     </Image>
-    <Image Include="..\Resources\scene101\sr_f_triangle.png">
+    <Image Include="..\Resources\scene101\scene101bg.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\sliderballnormal.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\sliderballpressed.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\sliderProgress.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\sliderTrack.png">
       <Filter>resource\scene101</Filter>
     </Image>
     <Image Include="..\Resources\scene101\sr_line1.png">
       <Filter>resource\scene101</Filter>
     </Image>
     <Image Include="..\Resources\scene101\sr_line2.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\triblock.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\triouter.png">
+      <Filter>resource\scene101</Filter>
+    </Image>
+    <Image Include="..\Resources\scene101\trishadow.png">
       <Filter>resource\scene101</Filter>
     </Image>
   </ItemGroup>
@@ -156,10 +328,24 @@
     </Font>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\Resources\scene101\bmfontexample.txt">
+    <Media Include="..\Resources\scene101\arrivalsfinalsound.mp3">
       <Filter>resource\scene101</Filter>
-    </Text>
-    <Text Include="..\Resources\scene101\text.txt">
+    </Media>
+    <Media Include="..\Resources\scene101\gain point.mp3">
+      <Filter>resource\scene101</Filter>
+    </Media>
+    <Media Include="..\Resources\scene101\running.mp3">
+      <Filter>resource\scene101</Filter>
+    </Media>
+    <Media Include="..\Resources\scene101\SR_bg.mp3">
+      <Filter>resource\scene101</Filter>
+    </Media>
+    <Media Include="..\Resources\scene101\thinking cloud.mp3">
+      <Filter>resource\scene101</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Resources\scene101\bmfontexample.txt">
       <Filter>resource\scene101</Filter>
     </Text>
   </ItemGroup>
